@@ -127,7 +127,9 @@ const DashboardPage = () => {
 
       const FETCHUSERLINK =
         "https://npf-backend-praveen.vercel.app/api/entry/user";
-      axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
+      axios.defaults.baseURL = "https://npf-backend-praveen.vercel.app";
+      axios.defaults.headers.post["Access-Control-Allow-Origin"] =
+        "https://npf-backend-praveen.vercel.app";
 
       axios
         .post(FETCHUSERLINK, RequestData)
