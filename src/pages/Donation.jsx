@@ -67,9 +67,10 @@ const Donation = () => {
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+    axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
     axios
       .post(
-        "https://naye-pankh-foundation-backend.vercel.app/api/user/donation",
+        "https://npf-backend-praveen.vercel.app/api/user/donation",
         formData
       )
       .then((response) => {
