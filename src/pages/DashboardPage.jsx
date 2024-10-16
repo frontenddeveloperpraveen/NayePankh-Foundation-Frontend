@@ -127,6 +127,7 @@ const DashboardPage = () => {
 
       const FETCHUSERLINK =
         "https://naye-pankh-foundation-backend.vercel.app/api/entry/user";
+      axios.defaults.headers.post["Access-Control-Allow-Origin"] = "*";
 
       axios
         .post(FETCHUSERLINK, RequestData)
